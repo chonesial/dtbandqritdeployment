@@ -11,6 +11,7 @@
    - service-manifest.yaml
 
 ###     Content 
+
 1- operation Steps  
 2- Dockerfile
 3- Dockercompose file 
@@ -28,8 +29,29 @@
 
               ```
     Step 2 : Docker commit container to image and Docker Login 
+
+             ```
+             docker commit container_id chonesial/dtb-server:latest
+            ```
     
     Step 3 : Docker push to Docker Repository 
-    Step 4 : Docker stop and Delete Container 
-    Step 5 : Deploy kubernetes Cluster and service 
     
+          ```
+          docker push chonesial/dtb-server:latest
+         ```
+         
+    Step 4 : Docker stop and Delete Container 
+    
+    
+    Step 5 : Deploy kubernetes Cluster and service 
+
+    Step 6 : Expose service (as we are running  on windows)
+
+                   minikube service --all
+    
+
+2 : Docker file 
+
+         https://github.com/sachin-chand-tc/dtb/blob/master/cmd/api/Dockerfile
+
+         
